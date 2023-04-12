@@ -10,9 +10,9 @@ url_lists = "xui/inbound/list"
 servers = [
 
     {
-        'url': "panel url example: https://iran.example.com:7000/",
-        'user_panel': 'admin',
-        'pass_panel': 'admin',
+        'url': "http://aks1.akelasoldier.shop:2095/",
+        'user_panel': 'Akela',
+        'pass_panel': '90748487041aA@!',
     },
     # {
     #     'url': "https://iran.example.com:7000/",

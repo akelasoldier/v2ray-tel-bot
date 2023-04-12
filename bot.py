@@ -23,24 +23,28 @@ from telegram.constants import ParseMode
 WHAT_APP = {
     "Nekoray": {
         "name": "Nekoray",
-        "image_path": os.path.join(real_dir,"images/nekoray.jpg")
+        "image_path": os.path.join(real_dir,"images/nekoray.png")
     },
 
     "V2rayNG": {
         "name": "V2rayNG",
-        "image_path": os.path.join(real_dir,"images/v2rayng.jpg")
+        "image_path": os.path.join(real_dir,"images/v2rayng.png")
     },
 
     "OneClick": {
         "name": "OneClick",
-        "image_path": os.path.join(real_dir,"images/oneclick.jpg")
+        "image_path": os.path.join(real_dir,"images/oneclick.png")
     },
 
     "NamsternetV": {
         "name": "NamsternetV",
-        "image_path": os.path.join(real_dir,"images/napsternetv.jpg")
+        "image_path": os.path.join(real_dir,"images/napsternetv.png")
     },
 
+        "WingsX": {
+        "name": "WingsX",
+        "image_path": os.path.join(real_dir,"images/WingsX.png")
+    },
 }
 
 
@@ -48,9 +52,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Inform user about what this bot can do"""
     user_name = update.message.from_user.first_name
 
-    await update.message.reply_text(f"""سلام {user_name} عزیز خوش اومدی
-برای اینکه اطلاعات فیلترشکن رو ببینی نیازه آیدی(uuid/id) اکانتتو بفرستی...
-اگ نمیدونی چجوری آیدی رو بدست بیاری رو /what بزن""")
+    await update.message.reply_text(f"""👋🏻سلام {user_name} عزیز خوش اومدی
+⚠️ برای اینکه اطلاعات فیلترشکن رو ببینی نیازه آیدی (uuid/id) اکانتتو بفرستی
+
+ ‼️ اگ نمیدونی چجوری آیدی رو بدست بیاری رو /what بزن
+
+👤 پشتیبانی فروش @aksadmin""")
 
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -108,8 +115,9 @@ async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 async def post_init(application: Application):
     await application.bot.set_my_commands([
-        BotCommand("/start", "استارت"),
-        BotCommand("/what", "چه نرم افزاری استفاده میکنید؟"),
+        BotCommand("/start", "شروع"),
+        BotCommand("/what", "از چه برنامه ای استفاده میکنید؟"),
+        BotCommand("/Admin", "پشتیبانی"),
     ])
 
 
